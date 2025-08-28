@@ -1,0 +1,5 @@
+
+SELECT b.*, w.*
+FROM bonus b
+RIGHT JOIN worker w
+ON b.worker_ref_id = w.worker_id
