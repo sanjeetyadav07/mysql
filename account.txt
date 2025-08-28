@@ -1,0 +1,11 @@
+create table account ( id int primary key,name varchar(100) UNIQUE,
+balance INT,
+CONSTRAINT acc_balance_chk CHECK (balance>1000)
+);
+INSERT INTO account(id,name,balance)
+values(1,'a',10000);
+ALTER TABLE account ADD interest FLOAT NOT NULL DEFAULT 0;
+SELECT * FROM account;
+ALTER TABLE account  MODIFY interest DOUBLE NOT NULL DEFAULT 0;
+DESC account;
+
